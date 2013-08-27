@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0EBAC81217CC7D0100AD3138"
                BuildableName = "WelsonlaFramework.framework"
-               BlueprintName = "WelsonlaFramework"
+               BlueprintName = "HelloFramework"
                ReferencedContainer = "container:Xcode-Framwork-build-template.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

@@ -171,9 +171,9 @@
 			productReference = 0EBAC7EC17CC7C8800AD3138 /* Xcode-Framwork-build-template.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0EBAC81217CC7D0100AD3138 /* WelsonlaFramework */ = {
+		0EBAC81217CC7D0100AD3138 /* HelloFramework */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0EBAC81D17CC7D0100AD3138 /* Build configuration list for PBXNativeTarget "WelsonlaFramework" */;
+			buildConfigurationList = 0EBAC81D17CC7D0100AD3138 /* Build configuration list for PBXNativeTarget "HelloFramework" */;
 			buildPhases = (
 				0EBAC80F17CC7D0100AD3138 /* Sources */,
 				0EBAC81017CC7D0100AD3138 /* Frameworks */,
@@ -184,7 +184,7 @@
 			);
 			dependencies = (
 			);
-			name = WelsonlaFramework;
+			name = HelloFramework;
 			productName = WelsonlaFramework;
 			productReference = 0EBAC81317CC7D0100AD3138 /* WelsonlaFramework.framework */;
 			productType = "com.apple.product-type.bundle";
@@ -211,7 +211,7 @@
 			projectRoot = "";
 			targets = (
 				0EBAC7EB17CC7C8800AD3138 /* Xcode-Framwork-build-template */,
-				0EBAC81217CC7D0100AD3138 /* WelsonlaFramework */,
+				0EBAC81217CC7D0100AD3138 /* HelloFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -425,7 +425,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0EBAC81D17CC7D0100AD3138 /* Build configuration list for PBXNativeTarget "WelsonlaFramework" */ = {
+		0EBAC81D17CC7D0100AD3138 /* Build configuration list for PBXNativeTarget "HelloFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EBAC81E17CC7D0100AD3138 /* Debug */,
