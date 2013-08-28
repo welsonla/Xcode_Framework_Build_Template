@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		0E4EF12F17CDA91B00615260 /* Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0E4EF13217CDA91B00615260 /* Build configuration list for PBXAggregateTarget "Universal" */;
+			buildPhases = (
+				0E4EF13517CDA93C00615260 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Universal;
+			productName = Universal;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		0EBAC7F017CC7C8800AD3138 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBAC7EF17CC7C8800AD3138 /* UIKit.framework */; };
 		0EBAC7F217CC7C8800AD3138 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBAC7F117CC7C8800AD3138 /* Foundation.framework */; };
@@ -38,7 +52,7 @@
 		0EBAC80517CC7C8900AD3138 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		0EBAC80C17CC7CA700AD3138 /* Hello.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hello.h; sourceTree = "<group>"; };
 		0EBAC80D17CC7CA700AD3138 /* Hello.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hello.m; sourceTree = "<group>"; };
-		0EBAC81317CC7D0100AD3138 /* WelsonlaFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WelsonlaFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EBAC81317CC7D0100AD3138 /* WelsonlaFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = WelsonlaFramework.framework; path = HelloFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBAC81417CC7D0100AD3138 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		0EBAC81817CC7D0100AD3138 /* WelsonlaFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WelsonlaFramework-Info.plist"; sourceTree = "<group>"; };
 		0EBAC81A17CC7D0100AD3138 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -212,6 +226,7 @@
 			targets = (
 				0EBAC7EB17CC7C8800AD3138 /* Xcode-Framwork-build-template */,
 				0EBAC81217CC7D0100AD3138 /* HelloFramework */,
+				0E4EF12F17CDA91B00615260 /* Universal */,
 			);
 		};
 /* End PBXProject section */
@@ -237,6 +252,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E4EF13517CDA93C00615260 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${ACTION}\" = \"build\" ]\nthen\n# Set the target folders and the final framework product.\nINSTALL_DIR=${SYMROOT}/BaseDSAFrameWork.framework\nDEVICE_DIR=${SYMROOT}/Release-iphoneos\nSIMULATOR_DIR=${SYMROOT}/Release-iphonesimulator\n\n# Create and renews the final product folder.\nmkdir -p \"${INSTALL_DIR}\"\nrm -rf \"${INSTALL_DIR}\"\nrm -rf \"${INSTALL_DIR}/HelloFramework\"\n\n# Copy the header files to the final product folder.\nditto \"${DEVICE_DIR}/HelloFramework.framework/Headers\" \"${INSTALL_DIR}/Headers\"\n\n# Use the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/HelloFramework.framework/HelloFramework\" \"${SIMULATOR_DIR}/HelloFramework.framework/HelloFramework\" -output \"${INSTALL_DIR}/HelloFramework\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0EBAC7E817CC7C8800AD3138 /* Sources */ = {
@@ -279,6 +310,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0E4EF13017CDA91B00615260 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0E4EF13117CDA91B00615260 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		0EBAC80717CC7C8900AD3138 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -407,6 +452,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0E4EF13217CDA91B00615260 /* Build configuration list for PBXAggregateTarget "Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E4EF13017CDA91B00615260 /* Debug */,
+				0E4EF13117CDA91B00615260 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		0EBAC7E717CC7C8800AD3138 /* Build configuration list for PBXProject "Xcode-Framwork-build-template" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

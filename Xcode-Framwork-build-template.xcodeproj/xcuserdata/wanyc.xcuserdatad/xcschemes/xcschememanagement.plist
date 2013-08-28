@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Universal.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>WelsonlaFramework.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -17,6 +22,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0E4EF12F17CDA91B00615260</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0EBAC7EB17CC7C8800AD3138</key>
 		<dict>
 			<key>primary</key>
