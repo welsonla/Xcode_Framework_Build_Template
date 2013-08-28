@@ -22,7 +22,7 @@ Xcode_Framework_Build_Template
 
 * Build Active Architecture Only选择NO
 
-* Drad Code Stripping设置为NO
+* Dead Code Stripping设置为NO
 
 * Mach-O Type 为Relocatable Object File
 
